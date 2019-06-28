@@ -10,7 +10,7 @@
  var computerChoice = [ "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
  var wins = 0;
  var losses = 0;
- var guessLeft = 9;
+ var guessLeft = 10;
  var printGuesses = [];   
 
  document.onkeyup = function(event) {
@@ -28,13 +28,13 @@
 
      if (playerGuess === computerGuess) {
          wins ++;
-         guessLeft = 9;
+         guessLeft = 10;
          printGuesses = [];
 
      } 
 
      if (guessLeft === 0){
-        guessLeft = 9;
+        guessLeft = 10;
         losses ++;
         printGuesses = []
          
@@ -42,7 +42,7 @@
      
      if (playerGuess != computerGuess) {
         guessLeft --;
-        printGuesses.push(userGuess) 
+        printGuesses.push(playerGuess) 
      }
 
      var html = 
